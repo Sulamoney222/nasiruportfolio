@@ -1,40 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StarIcon from '@mui/icons-material/Star';
 
-const ReviewCard = ({ content, name, imgSrc, company }) => {
-  // Create an array of 5 stars with unique keys
-  const ratings = Array.from({ length: 5 }, (_, i) => (
-    <StarIcon key={i} className="text-yellow-400 text-xl" />
-  ));
-
+const SkillCard = ({ imgSrc, label, desc, classes = '' }) => {
   return (
-    <div className="bg-blue-900 p-6 rounded-xl min-w-[320px] flex flex-col lg:min-w-[420px] shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <div className="flex items-center gap-1 mb-4" aria-label="Rating: 5 out of 5 stars">
-        {ratings}
-      </div>
+    <div
+      data-aos="flip-left"
+      className={
+        `flex items-center gap-4 p-4 rounded-xl ring-2 ring-inset ring-blue-500 bg-white shadow-sm transition-shadow hover:shadow-lg hover:bg-blue-50 ${classes}`
+      }
+      role="group"
+      tabIndex={0}
+      aria-label={`${label} skill card`}
+    >
+      <figure className="flex-shrink-0 w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center overflow-hidden transition-colors group-hover:bg-blue-300">
+        <img
+          className="max-w-[70%] max-h-[70%] object-contain"
+          src={imgSrc}
+          alt={label}
+          loading="lazy"
+          width={56}
+          height={56}
+        />
+      </figure>
 
-      <p className="text-zinc-50 mb-8 text-sm leading-relaxed">{content}</p>
-
-      <div className="flex items-center gap-4 mt-auto">
-        <figure className="w-11 h-11 rounded-full overflow-hidden flex-shrink-0">
-          <img src={imgSrc} alt={name} className="img-cover w-full h-full object-cover" />
-        </figure>
-
-        <div>
-          <p className="font-semibold text-white">{name}</p>
-          <p className="text-xs text-zinc-400 tracking-wider uppercase">{company}</p>
-        </div>
+      <div>
+        <h3 className="text-lg font-semibold text-blue-900">{label}</h3>
+        <p className="text-sm text-blue-700 mt-1 max-w-[18rem]">{desc}</p>
       </div>
     </div>
   );
 };
 
-ReviewCard.propTypes = {
-  content: PropTypes.string.isRequired,
+SkillCard.propTypes = {
   imgSrc: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  company: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  classes: PropTypes.string,
 };
 
-export default ReviewCard;
+export default SkillCard;

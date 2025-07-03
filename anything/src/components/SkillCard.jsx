@@ -5,7 +5,7 @@ const SkillCard = ({imgSrc, label, desc, classes}) => {
   return (
     <>
     <div data-aos='flip-left' className={'flex items-center gap-3 ring-2 ring-inset ring-blue-500 rounded-2xl p-3 hover:bg-blue-200 transition-colors group ' + classes}>
-        <figure className='bg-zinc-50 rounded-lg overflow-hidden w-12 h-12
+        <figure className='bg-sky-500 rounded-lg overflow-hidden w-12 h-12
                             group-hover:bg-zinc-700 transition-colors'>
             <img className='w-20 h-12'
             src={imgSrc}

@@ -48,15 +48,15 @@ const Skill = () => {
   return (
     <section className="section" aria-label="Skills and Tools">
       <div className="container max-w-6xl mx-auto px-4">
-        <h2 className="headline-2 font-semibold text-gray-900">
+        <h2 className="headline-2 font-semibold text-blue-900">
           Essential Tools I Use
         </h2>
 
-        <p className="mt-3 mb-8 max-w-xl text-gray-700">
+        <p className="mt-3 mb-10 max-w-xl text-blue-700">
           Check out the tools and technologies I use to build high-performing websites and applications.
         </p>
 
-        <div className="grid  grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">
+        <div className="grid gap-6 grid-cols-[repeat(auto-fill,minmax(280px,1fr))]">
           {skillItems.map(({ imgSrc, label, desc }) => (
             <SkillCard key={label} imgSrc={imgSrc} label={label} desc={desc} />
           ))}
