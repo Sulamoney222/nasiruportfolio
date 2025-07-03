@@ -104,7 +104,7 @@ body{
   @apply text-[22px] font-normal
 }
 
-/* 
+/*    nn
 TEXT FIELD */
 .label{
   @apply block text-sm font-normal mb-2 text-gray-900 font-bold
