@@ -58,8 +58,8 @@ const works = [
     imgSrc: count,
     title: 'Shopping Website',
     tags:[{
-      label:'HTML',},
-    {label:'CSS'},
+      label:'React.JS',},
+    {label:'Tailwind CSS'},
     ,{label:'JAVASCRIPT & JSON'},
     ],
     projectLink: 'https://first-ecommerce-website-five.vercel.app/'
