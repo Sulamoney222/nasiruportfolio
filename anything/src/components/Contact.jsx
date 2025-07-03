@@ -59,6 +59,7 @@ const Contact = () => {
                             <>
                             <a 
                             key={key}
+                            alt={alt}
                             href={href}
                             className=' w-12 h-12 grid place-items-center text-blue-700 ring-inset ring-2 ring-zinc-50 rounded-lg transition-[background-color,color] hover:bg-zinc-50 hover:text-blue-700 active:bg-zinc-500'
                             target='_blank'>
@@ -103,7 +104,7 @@ const Contact = () => {
           type="text" 
           id='email' 
           name='email' 
-          placeholder='emila"gmail.com'
+          placeholder='emila@gmail.com'
           autoComplete='email' 
           className="text-field"  
           required/>

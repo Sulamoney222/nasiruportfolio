@@ -56,12 +56,12 @@ const Navbar = ({navOpen}) => {
           className: 'nav-link',
           key:3,
         },
-        {
-          label: 'Reviews',
-          link: '#reviews',
-          className: 'nav-link',
-          key:4,
-        },
+        // {
+        //   label: 'Reviews',
+        //   link: '#reviews',
+        //   className: 'nav-link',
+        //   key:4,
+        // },
         {
           label: 'Contact',
           link: '#contact',
