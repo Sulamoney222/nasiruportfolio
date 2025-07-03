@@ -8,36 +8,61 @@ import bank from './images/bank.png'
 import zora from './images/zoralty.png'
 import coin from './images/coin.png'
 import random from './images/random.png'
-import phone from './images/phone.png'
+import phone from './images/poly.png'
 import quiz from './images/quiz.png'
 import commerce from './images/commerce.png'
 import photo from './images/photo.png'
 import cock from './images/cock.png'
-import travel from './images/travel.png'
-import count from './images/countdown.png'
+import travel from './images/iphone.png'
+import count from './images/shop.png'
 
 
 const works = [
 
   {
     imgSrc: phone,
-    title: `Phone Marketting Website`,
+    title: `Polygon Web3 Website`,
+    tags:[{
+      label:'Next.JS',},
+    {label:'Tailwind Css'},
+    ,{label:'Swipper.JS'},
+    ],
+    desc:'This platform serves as a reliable source for the latest updates, news, and developments within the Polygon Web3 blockchain ecosystem. It is designed to keep developers, investors, and enthusiasts informed about key advancements, ecosystem projects, and emerging trends across the Polygon network.',
+    
+    projectLink: 'https://polygon-blockproject.vercel.app/'
+  },
+  {
+    imgSrc: travel,
+    title: 'iPhone Cal.',
+    tags:[{
+      label:'React',},
+    {label:'TailwindCSS'},
+    ,{label:'Api'}],
+    desc:'The iPhone website provides up-to-date information on the newest iPhone models, including their specifications, features, and availability. It serves as an official source for exploring and comparing different iPhone versions to help users make informed purchasing decisions.',
+    projectLink: 'https://iphone-project-eosin.vercel.app/'
+  },
+
+  {
+    imgSrc: photo,
+    title: 'Clone stock photo app',
+    tags:[{
+      label:'React',},
+    {label:'TailwindCSS'},
+    ],
+    desc:'This clone stock app delivers timely updates and downloads of the latest gallery versions, ensuring users have access to the newest features, enhancements, and visual assets as they become available.',
+
+    projectLink: 'https://pixstock-official.vercel.app/'
+  },
+
+  {
+    imgSrc: count,
+    title: 'Shopping Website',
     tags:[{
       label:'HTML',},
     {label:'CSS'},
     ,{label:'JAVASCRIPT & JSON'},
     ],
-    
-    projectLink: 'https://phone-shopping.vercel.app/'
-  },
-  {
-    imgSrc: photo,
-    title: 'Free stock photo app',
-    tags:[{
-      label:'React',},
-    {label:'TailwindCSS'},
-    ],
-    projectLink: 'https://pixstock-official.vercel.app/'
+    projectLink: 'https://first-ecommerce-website-five.vercel.app/'
   },
   {
     imgSrc: quiz,
@@ -47,6 +72,7 @@ const works = [
     {label:'CSS'},
     ,{label:'JAVASCRIPT'},
     ],
+    desc:'r',
     projectLink: 'https://sulamoney-mc-qs-ashen.vercel.app/'
   },
   {// https://sulamoney-mc-qs-ashen.vercel.app/
@@ -58,15 +84,7 @@ const works = [
     ,{label:'Api'}],
     projectLink: 'https://allcocktailapi-website-hah2.vercel.app/'
   },
-  {
-    imgSrc: travel,
-    title: 'TravelTour Website',
-    tags:[{
-      label:'React',},
-    {label:'TailwindCSS'},
-    ,{label:'Api'}],
-    projectLink: 'https://real-tour-website-dmhs.vercel.app/'
-  },
+  
   {
     imgSrc: commerce,
     title: 'Crypto Countdown Website',
@@ -170,11 +188,12 @@ const Work = () => {
             <div className='grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]'>
 
                 {
-                    works.map(({imgSrc,title,tags, projectLink, key})=>{
+                    works.map(({imgSrc,title,tags, projectLink, key,desc})=>{
                      return    <ProjectCard 
                          key={key}
                          imgSrc={imgSrc}
                          title={title}
+                         desc={desc}
                          tags={tags}
                          projectLink={projectLink}/>
                     })
