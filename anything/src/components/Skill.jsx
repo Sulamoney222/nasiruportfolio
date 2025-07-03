@@ -62,11 +62,14 @@ const Skill = () => {
                     skillItem.map(({imgSrc, label, desc})=>{
                         return(
                             <>
-                            <SkillCard 
+                            
+                              <SkillCard 
                             imgSrc={imgSrc}
                             label={label}
                             desc={desc}
                             />
+                         
+
                             </>
                         )
                     })
