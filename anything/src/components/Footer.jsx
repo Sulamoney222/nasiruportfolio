@@ -40,12 +40,8 @@ const sitemap = [
     },
     {
       label: 'Instagram',
-      href: '` ,c '
+      href: ' '
     },
-    {
-      label: 'CodePen',
-      href: 'https://codepen.io/codewithsadee'
-    }
   ];
 
 const Footer = () => {
