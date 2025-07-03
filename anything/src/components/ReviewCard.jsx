@@ -1,67 +1,40 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-// import StarBorderIcon from '@mui/icons-material/StarBorder';
-// import StarBorder from '@mui/icons-material/StarBorder';
+import React from 'react';
+import PropTypes from 'prop-types';
 import StarIcon from '@mui/icons-material/Star';
-// import me from './node_modules/.vite/deps/@mui_icons-material_Star.js'
-const ratings =new Array(5);
-ratings.fill({
-    icon: <StarIcon/>,
-    style: {fontVarirationSettings: '"FILL"1'},
-    key: new Date().getTime.toString()
-})
-console.log(ratings);
 
-const ReviewCard = ({content, name, imgSrc, company,key}) => {
+const ReviewCard = ({ content, name, imgSrc, company }) => {
+  // Create an array of 5 stars with unique keys
+  const ratings = Array.from({ length: 5 }, (_, i) => (
+    <StarIcon key={i} className="text-yellow-400 text-xl" />
+  ));
+
   return (
-    <>
-  <div className='bg-blue-900 p-5 rounded-xl min-w-[320px] flex flex-col lg:min-w-[420px]' key={key}>
-   
-   <div className='flex items-center gap-1 mb-3'>
-    {
-        ratings.map(({icon,style,key})=>{
-            return(
-                <span
-                key={key}
-                className='text-yellow-400 text-[18px]'
-                style={style}>
-               {icon}
-             
-                </span>
-            )
-        })
-    }
-   </div>
-   <p className='text-zinc-50 mb-8'>
-    {content}
-   </p>
+    <div className="bg-blue-900 p-6 rounded-xl min-w-[320px] flex flex-col lg:min-w-[420px] shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div className="flex items-center gap-1 mb-4" aria-label="Rating: 5 out of 5 stars">
+        {ratings}
+      </div>
 
-   <div className=' flex items-center gap-2 mt-auto'>
-    <figure className='img-box rounded-lg'>
-        <img 
-        src={imgSrc}
-        alt={name}
-        width={44}
-        height={44}
-        className='img-cover' />
-    </figure>
+      <p className="text-zinc-50 mb-8 text-sm leading-relaxed">{content}</p>
 
-    <div>
-        <p>{name}</p>
-       <p className='text-xs text-zinc-400 tracking-wider'>{company}</p>
-        
+      <div className="flex items-center gap-4 mt-auto">
+        <figure className="w-11 h-11 rounded-full overflow-hidden flex-shrink-0">
+          <img src={imgSrc} alt={name} className="img-cover w-full h-full object-cover" />
+        </figure>
+
+        <div>
+          <p className="font-semibold text-white">{name}</p>
+          <p className="text-xs text-zinc-400 tracking-wider uppercase">{company}</p>
+        </div>
+      </div>
     </div>
-   </div>
-  </div>
-    </>
-  )
-}
+  );
+};
 
-ReviewCard.PropTypes={
-    content: PropTypes.string.isRequired,
-    imgSrc: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    company: PropTypes.string.isRequired,
-}
+ReviewCard.propTypes = {
+  content: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  company: PropTypes.string.isRequired,
+};
 
-export default ReviewCard
+export default ReviewCard;
