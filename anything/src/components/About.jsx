@@ -4,12 +4,12 @@ import React from 'react'
 const aboutItems =[
     {
         label: 'Project done',
-        number:20,
+        number:10,
         key:1
     },
     {
         label:'Years of experience',
-        number:7,
+        number:5,
         key:2
     }
 ]
@@ -21,12 +21,12 @@ const About = () => {
     id='about'
     className='section'
     >
-        <div className='container'>
+        <div data-aos='zoom-out' className='container'>
             <div className=' bg-zinc-50 p-7 rounded-2xl md:p-12  '>
                 <p className=' text-blue-950 mb-4 md:mb-8 md:text-xl md:max-w-[90ch]'>
-                I’m <b>NASIRU SULAIMON</b>, a passionate React Frontend Developer and UI/UX Designer with over 5 years of hands-on experience creating seamless, user-centered digital experiences. I specialize in building intuitive, responsive, and high-performance web applications that delight users and meet business goals. My dual expertise in both front-end development and user experience design allows me to craft cohesive solutions that not only look great but function smoothly and efficiently.
+                I’m <b>NASIRU SULAIMON</b>, a dedicated React Frontend Developer with over 5 years of experience building intuitive, responsive, and high-performance web applications. I focus on crafting seamless user interfaces that provide smooth and engaging digital experiences while aligning with business goals.
 
-I have a strong foundation in React, Typescript, JavaScript, HTML5, CSS3, and modern web technologies, coupled with a keen eye for design. I collaborate closely with clients to understand their vision, translate it into clean code, and deliver interfaces that engage users and drive results.
+With a strong command of React, TypeScript, JavaScript, HTML5, CSS3, and modern web technologies, I translate client requirements into clean, efficient code. I work closely with teams and stakeholders to deliver scalable and maintainable solutions that not only look great but also perform reliably across devices.
                 </p>
                 <div className=' flex flex-wrap items-center gap-4 md:gap-7'>
                     {
